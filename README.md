@@ -1,7 +1,21 @@
 # Starter
-Starter kit for emulsify for Drupal. This is a emulsify setup for multiple project, avoiding some steps.
+Starter kit for emulsify for Drupal. This is a base emulsify setup for multiple project. 
 
-Original documentation by Four Kitchens (Emulsify)
+# How to setup
+## Requisites
+Unified twig extension: https://packagist.org/packages/drupal-pattern-lab/unified-twig-extensions
+Components library: https://www.drupal.org/project/components 
+
+# Steps
+1. Clone the repo into `/themes/custom`
+2. Rename `starter`for the name desired in all files.
+3. Run `npm install` on the root of the theme. It's possible some permission errors pop up if you are using docker. You will have to run the bash scripts manually: `bash scripts/pattern_lab.sh` and then `bash scripts/twig_functions.php`. Those scripts will download patter-lab folder and twig functions.
+4. Enable the theme and also the requiered modules: `drush then THEME_NAME -y && drush en components unified_twig_ext -y`
+5. Setup the `local.gulp-config.js` on the root of the theme. Recommended to use this setup: https://github.com/fourkitchens/emulsify-gulp/blob/develop/gulp-config.js
+6. Run `npm start`
+
+
+Original documentation by Four Kitchens (Emulsify):
 
 [![Four Kitchens](https://img.shields.io/badge/4K-Four%20Kitchens-35AA4E.svg)](https://fourkitchens.com/)
 
